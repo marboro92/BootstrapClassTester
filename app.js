@@ -16,6 +16,11 @@ angular.module("app",["ui.router"])
 		var text = this;
 		text.message = "Hello";
 	})
+	.filter("reverse", function(){
+		return function(text) {
+			return text.split("").reverse().join("");
+		}
+	})
 	.controller("FirstCtrl", function FirstCtrl(text) {
 		var first = this;
 		first.divClass ="default";
