@@ -1,0 +1,10 @@
+<!-- ex.1: Displays the text typed in the input into the h1 -->
+<label>Some Words:</label><input type="text" ng-model="second.text.message"><!-- this is where we need to reference the model -->
+<h1 ng-class="second.divClass">{{second.text.message}}</h1><!-- this is a binding, this gets rendered, we can do math here too -->
+<!--end of ex.1 -->
+<!-- ex.2: Using angular to change an objects classes like alert alert-danger -->
+<label>Bootstrap Class:</label><input type="text" ng-model="second.divClass">
+<!--end of ex.2 -->
+
+<!-- TODO: click to go to the second template -->
+<div ui-sref="" class="btn btn-primary btn-md">Go To First</div>

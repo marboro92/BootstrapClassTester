@@ -6,9 +6,23 @@ angular.module("app",["ui.router"])
 			controller: "FirstCtrl as first",
 			templateUrl: "templates/first.html"
 		})
+		$stateProvider.state("second",{
+			url: "/second",
+			controller: "SecondCtrl as second",
+			templateUrl: "templates/second.html"
+		})
 	})
-	.controller("FirstCtrl", function FirstCtrl() {
+	.service("text", function text(){
+		var text = this;
+		text.message = "Hello";
+	})
+	.controller("FirstCtrl", function FirstCtrl(text) {
 		var first = this;
 		first.divClass ="default";
-		first.text = "Test Classes";
+		first.text = text;
+	})
+	.controller("SecondCtrl", function SecondCtrl(text) {
+		var second = this;
+		second.divClass ="secondDefault";
+		second.text = text;
 	})
