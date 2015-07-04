@@ -1,6 +1,7 @@
 <!-- ex.1: Displays the text typed in the input into the h1 -->
 <label>Some Words:</label><input type="text" ng-model="first.text.message"><!-- this is where we need to reference the model -->
 <h1 ng-class="first.divClass">{{first.text.message}}</h1><!-- this is a binding, this gets rendered, we can do math here too -->
+<h2>{{first.reversedText(first.text.message)}}</h2>
 <!--end of ex.1 -->
 <!-- ex.2: Using angular to change an objects classes like alert alert-danger -->
 <label>Bootstrap Class:</label><input type="text" ng-model="first.divClass">

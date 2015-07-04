@@ -20,6 +20,9 @@ angular.module("app",["ui.router"])
 		var first = this;
 		first.divClass ="default";
 		first.text = text;
+		first.reversedText = function(text) {
+			return text.split("").reverse().join("");
+		};
 	})
 	.controller("SecondCtrl", function SecondCtrl(text) {
 		var second = this;
